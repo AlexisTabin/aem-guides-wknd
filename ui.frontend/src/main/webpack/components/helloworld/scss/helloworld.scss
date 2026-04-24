@@ -1,8 +1,13 @@
-.cmp-hello-world-sass {
+.cmp-helloworld {
+
     &:before {
         content: "\003e";
-
         display: inline-block;
         padding: 0 10px;
+    }
+
+    &__title {
+        color: rgb(0, 255, 21);
+        font-weight: bold;
     }
 }
