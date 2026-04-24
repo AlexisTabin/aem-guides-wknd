@@ -12,10 +12,10 @@
   "scripts": {
     "dev": "webpack --env dev --config ./webpack.dev.js && clientlib --verbose",
     "prod": "webpack --config ./webpack.prod.js && clientlib --verbose",
-    "start": "webpack-dev-server --open --config ./webpack.dev.js",
-    "sync": "aemsync -d -p ../ui.apps/src/main/content",
+    "start": "webpack-dev-server --open --env writeToDisk=true --config ./webpack.dev.js",
+    "sync": "aemsync -d -p ../ui.apps/src/main/content -t http://admin:admin@localhost:10000",
     "chokidar": "chokidar -c \"clientlib\" ./dist",
-    "aemsyncro": "aemsync -w ../ui.apps/src/main/content",
+    "aemsyncro": "aemsync -w ../ui.apps/src/main/content -t http://admin:admin@localhost:10000",
     "watch": "npm-run-all --parallel start chokidar aemsyncro",
     "storybook": "start-storybook -p 6006"
   },

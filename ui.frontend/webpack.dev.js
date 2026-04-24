@@ -24,7 +24,7 @@ module.exports = env => {
         devServer: {
             proxy: [{
                 context: ['/content', '/etc.clientlibs', '/libs'],
-                target: 'http://localhost:4502',
+                target: 'http://localhost:10000',
             }],
             client: {
                 overlay: {
